@@ -1,0 +1,21 @@
+<?php
+require_once('connection.php');
+$nameEng=$_POST['nameEng'];
+$nameTh=$_POST['nameTh'];
+$year=$_POST['year'];
+$dayUpload=$_POST['dayUpload'];
+$view=$_POST['view'];
+$mpaRate=$_POST['mpaRate'];
+$hour=$_POST['hour'];
+$min=$_POST['min'];
+$type=$_POST['type'];
+$synopsis=$_POST['synopsis'];
+$poster=$_POST['poster'];
+$movieCodeEng=$_POST['movieCodeEng'];
+$db->insert("movie",[
+    "orderid"=>$orderid,
+    "catname"=>$catname,
+    "movie"=>$movie,
+    "series"=>$series,
+    "status"=>$status
+]);
