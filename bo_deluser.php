@@ -4,4 +4,4 @@ $_POST = json_decode(file_get_contents("php://input"),true);
 $id=$_POST['id'];
 $db->delete("user",["id"=>$id]);
 ?>
-<!-- แก้ไข OTP ของ user -->
+    

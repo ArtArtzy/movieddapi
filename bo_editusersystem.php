@@ -25,4 +25,3 @@ $db->update("usersystem",[
     "us_id"=>$us_id
 ]);
 ?>
-<!-- แก้ไขผู้ดูแลใน usersystem -->

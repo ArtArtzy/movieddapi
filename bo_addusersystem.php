@@ -37,5 +37,5 @@ $db->insert("usersystem",[
     "us_admin"=>$us_admin,
     "token"=>$token
 ]);
+echo "OK"
 ?>
-<!-- เพิ่ม user ใน  usersystem -->

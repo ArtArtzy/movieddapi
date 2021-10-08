@@ -7,4 +7,3 @@ $db->update("category",[
     "status"=>$status
 ],["id"=>$id]);
 ?>
-<!-- เปลี่ยน status ของ category -->

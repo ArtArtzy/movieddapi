@@ -19,7 +19,7 @@ if($catname==$result[0]["catname"]){
 
                 "orderid"=>$orderid
             ],["id"=>$id]);
-            echo "finish";
+            echo "OK";
         }
     }else{
         echo "notchange";
@@ -36,7 +36,7 @@ else{
 
                 "catname"=>$catname
             ],["id"=>$id]);
-            echo "finish";
+            echo "OK";
         }
     }else{
         $result2=$db->select("category","*",["orderid"=>$orderid]);
@@ -54,7 +54,7 @@ else{
             "catname"=>$catname,
             "orderid"=>$orderid
         ],["id"=>$id]);
-        echo "finish";
+        echo "OK";
     }
 }
 ?>
