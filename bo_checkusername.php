@@ -13,4 +13,3 @@ if(sizeof($result) == 0){
     echo json_encode($result);
 }
 ?>
-<!-- เช็ค  username ตอน login -->
