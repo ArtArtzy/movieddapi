@@ -28,6 +28,7 @@ $db->insert("movie",[
     "durationHour"=>$durationHour,
     "durationMin"=>$durationMin,
     "type"=>$type,
+    "poster"=>1,
     "synopsis"=>$synopsis,
     "movieCodeEng"=>$movieCodeEng,
     "movieCodeTh"=>$movieCodeTh,
@@ -37,7 +38,7 @@ $db->insert("movie",[
     "amazon"=>$amazon,
     "hbo"=>$hbo,
     "new"=>$new,
-    "expiredate"=>$expiredate
+    "expireddate"=>$expiredate
 ]);
-echo "finish";
+echo $db->id();
 ?>
