@@ -10,6 +10,19 @@ if($type == 'm'){
     ],[
         "id"=>$id
     ]);
+} elseif($type == 't'){
+    $db->update("movie",[
+        "promotionTabletPic"=>0
+    ],[
+        "id"=>$id
+    ]);
+} elseif($type == 'p'){
+    $db->update("movie",[
+        "promotionPCPic"=>0
+    ],[
+        "id"=>$id
+    ]);
 }
+
 
 ?>
