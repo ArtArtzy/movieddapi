@@ -1,6 +1,5 @@
 <?php
 require_once('connection.php');
-$_POST = json_decode(file_get_contents("php://input"),true);
 $id = $_POST['id'];
 if(isset($_FILES['file'])){
     $file = $_FILES['file']['tmp_name'];
@@ -11,6 +10,7 @@ if(isset($_FILES['file'])){
     $new_file_name = $id . "m" . "." . $file_info;
     copy($file,"promotion/movie/".$new_file_name);
     chmod("promotion/movie/".$new_file_name,0777);
+    $db->update("movie",["promotionMobilePic"=>1],["id"=>$id]);
 }
 
 ?>
