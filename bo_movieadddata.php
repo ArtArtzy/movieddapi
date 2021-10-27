@@ -18,7 +18,7 @@ $disney = $_POST['disney'];
 $amazon = $_POST['amazon'];
 $hbo = $_POST['hbo'];
 $new = $_POST['new'];
-$expiredate = $_POST['expiredDate'];
+$expireddate = $_POST['expiredDate'];
 $timestamp = date("U");
 $db->insert("movie",[
     "nameEng"=>$nameEng,
@@ -38,7 +38,7 @@ $db->insert("movie",[
     "amazon"=>$amazon,
     "hbo"=>$hbo,
     "new"=>$new,
-    "expireddate"=>$expiredate,
+    "expireddate"=>$expireddate,
     "timestamp"=>$timestamp
 ]);
 echo $db->id();
