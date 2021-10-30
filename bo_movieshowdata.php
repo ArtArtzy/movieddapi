@@ -13,5 +13,16 @@ if($cat == 0){
     $sql = "select * from movie where  type like '%[" .  $cat . "]%' limit ". $pagestart . " , " . "10";
 }
 $result  = $db->query($sql)->fetchAll();
+// print_r($result);
+for($i=0;$i<sizeof($result);$i++){
+    $result2 = $db->select("viewmovietotal","view",[
+        "movieid"=>$result[$i]['id']
+    ]);
+    if(sizeof($result2) >0){
+        $result[$i]['view'] = $result2[0];
+    } else {
+        $result[$i]['view']=0;
+    }
+}
 echo json_encode($result);
 ?> 
