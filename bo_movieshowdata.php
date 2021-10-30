@@ -8,9 +8,9 @@ $pagestart = ($page-1)*10;
 // echo $pagestart;
 $pageend = ($page)*10;
 if($cat == 0){
-    $sql = "select * from movie limit " . $pagestart . " , " . $pageend;
+    $sql = "select * from movie limit " . $pagestart . " , " . "10";
 } else {
-    $sql = "select * from movie where  type like '%[" .  $cat . "]%' limit ". $pagestart . " , " . $pageend;
+    $sql = "select * from movie where  type like '%[" .  $cat . "]%' limit ". $pagestart . " , " . "10";
 }
 $result  = $db->query($sql)->fetchAll();
 echo json_encode($result);
