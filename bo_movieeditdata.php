@@ -18,7 +18,7 @@ $disney = $_POST['disney'];
 $amazon = $_POST['amazon'];
 $hbo = $_POST['hbo'];
 $new = $_POST['new'];
-$expiredate = $_POST['expiredate'];
+$expiredate = $_POST['expiredDate'];
 $id= $_POST['id'];
 
 $db->update("movie",[
