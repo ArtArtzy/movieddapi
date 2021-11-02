@@ -21,6 +21,24 @@ $new = $_POST['new'];
 $expiredate = $_POST['expiredDate'];
 $id= $_POST['id'];
 
+$result  = $db->select("movie","*",[
+"id"=>$id
+]);
+$typeOld = $result[0]['type'];
+$typeOld = explode(",",$typeOld);
+for($i=0;$i<sizeof($typeOld);$i++){
+    $datax =str_replace("[","",$typeOld[$i]);
+    $datax = str_replace("]","",$datax);
+    $db->update("category",["movie[-]"=>1],["id"=>$datax]);
+}
+
+$typeNew = explode(",",$type);
+for($i=0;$i<sizeof($typeNew);$i++){
+    $datax =str_replace("[","",$typeNew[$i]);
+    $datax = str_replace("]","",$datax);
+    $db->update("category",["movie[+]"=>1],["id"=>$datax]);
+}
+
 $db->update("movie",[
     "nameEng"=>$nameEng,
     "nameTh"=>$nameTh,
