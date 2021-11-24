@@ -5,4 +5,8 @@ $token = $_POST['token'];
 $result  = $db->select("usersystem","*",[
     "token"=>$token
 ]);
-echo json_encode($result);
+if(sizeof($result) == 1){
+    echo json_encode($result);
+} else {
+    echo "logout";
+}
