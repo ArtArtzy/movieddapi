@@ -6,7 +6,7 @@ $cat = $_POST["cat"];
 if($cat != 0){
 $sql = "select count(id) from series where type like '%[" .  $cat . "]%'";
 } else {
-    $sql = "select count(id) from movie";
+    $sql = "select count(id) from series";
 }
 $numberofrecord  = $db->query($sql)->fetchAll();
 echo ceil($numberofrecord[0][0]/10);
