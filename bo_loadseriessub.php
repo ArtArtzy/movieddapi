@@ -4,7 +4,7 @@ $_POST = json_decode(file_get_contents("php://input"),true);
 
 $seriesid = $_POST['seriesid'];
 $seasonid = $_POST['seasonid'];
-$result=$db->select("seriessub","*",[
+$result=$db->select("episode","*",[
     "seriesid"=>$seriesid,
     "seasonid"=>$seasonid
 ]);
