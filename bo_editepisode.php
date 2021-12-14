@@ -8,7 +8,7 @@ $durationMin=$_POST['durationMin'];
 $movieCodeEng=$_POST['movieCodeEng'];
 $movieCodeTh=$_POST['movieCodeTh'];
 $id=$_POST['id'];
-$db->update("seriessub",[
+$db->update("episode",[
     "orderid"=>$orderid,
     "name"=>$name,
     "durationHour"=>$durationHour,
@@ -16,24 +16,5 @@ $db->update("seriessub",[
     "movieCodeEng"=>$movieCodeEng,
     "movieCodeTh"=>$movieCodeTh
 ],["id"=>$id]);
-//$result=$db->select("seriessub","*",["seriesid"=>$seriesid,"seasonid"=>$seasonid]);
 
-// if($name==$result[0]["name"]){
-//     if($orderid==$result[0]["orderid"]){
-//         echo "notchange";
-//     }else{
-//         $result2=$db->select("seriessub","*",["seriesid"=>$seriesid,"seasonid"=>$seasonid]);
-//         if(sizeof($result2)>0){
-//             echo "order id exist";
-//         }
-//         else{
-//             $db->update("seriessub",[
-
-//                 "orderid"=>$orderid
-
-//             ],["id"=>$result[0]["id"]);
-//             echo "OK";
-//         }
-//     }
-// }
 ?>

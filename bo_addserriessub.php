@@ -10,7 +10,7 @@ $durationMin=$_POST['durationMin'];
 $movieCodeEng=$_POST['movieCodeEng'];
 $movieCodeTh=$_POST['movieCodeTh'];
 
-$db->insert("seriessub",[
+$db->insert("episode",[
     "seriesid"=>$seriesid,
     "seasonid"=>$seasonid,
     "orderid"=>$orderid,
