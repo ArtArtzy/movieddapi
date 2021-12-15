@@ -13,13 +13,13 @@ $result2  = $db->query($sql2)->fetchAll();
 // print_r($result2);
 
 for($i=0;$i<sizeof($result2);$i++){
-    $result2[$i]["pick"] = "false";
+    $result2[$i]["pick"] = false;
 }
 // print_r($result2);
 for($i=0;$i<sizeof($result2);$i++){
     for($j=0;$j<sizeof($fav);$j++){
         if($result2[$i]["id"]==$fav[$j]){
-            $result2[$i]["pick"] = "true";
+            $result2[$i]["pick"] = true;
             // echo $fav[$j];
         }
     }
