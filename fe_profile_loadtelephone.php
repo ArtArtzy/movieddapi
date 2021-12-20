@@ -3,7 +3,7 @@ require_once('connection.php');
 $_POST = json_decode(file_get_contents("php://input"),true);
 
 $userid=$_POST['userid'];
-$userid=18;
+// $userid=18;
 
 $sql="select telephone from user where id=" . $userid;
 $result  = $db->query($sql)->fetchAll();
