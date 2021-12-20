@@ -7,7 +7,7 @@ $userid=19;
 $sql="select id from movie where promotion = 1";
 $moviePromote  = $db->query($sql)->fetchAll();
 for($i=0;$i<sizeof($moviePromote);$i++){
-    $moviePromote[$i]["type"] = 1;
+    $moviePromote[$i]["type"] = 1;      // type   1=movie,  2=series
 }
 // print_r($moviePromote);
 
