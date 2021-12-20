@@ -32,7 +32,10 @@ else{
             "status"=>1,
             "fav"=>""
         ]);
-        echo "finish";
+        $result3=$db->select("user","id",[
+            "username"=>$username
+        ]);
+        echo json_encode($result3);
     }
 }
 ?>
