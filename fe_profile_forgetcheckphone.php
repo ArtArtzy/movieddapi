@@ -7,7 +7,7 @@ $telephone="097-879-8855";
 $telephone=substr_replace($telephone,substr($telephone,4),3);
 $telephone=substr_replace($telephone,substr($telephone,7),6);
 
-echo $telephone;
+// echo $telephone;
 $result=$db->select("user","id",[
     "telephone"=>$telephone
 ]);
