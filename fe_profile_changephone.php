@@ -5,9 +5,11 @@ $_POST = json_decode(file_get_contents("php://input"),true);
 $userid=$_POST['userid'];
 $password=$_POST['password'];
 $newphone=$_POST['newphone'];
-$userid=19;
-$password="1122";
-$newphone="987654321";
+// $userid=19;
+// $password="1122";
+// $newphone="987654321";
+$newphone=substr_replace($newphone,substr($newphone,4),3);
+$newphone=substr_replace($newphone,substr($newphone,7),6);
 
 $result=$db->select("user","password",[
     "id"=>$userid

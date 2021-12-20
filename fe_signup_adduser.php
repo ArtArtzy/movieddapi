@@ -8,8 +8,8 @@ $telephone=$_POST['telephone'];
 // $username="abcdefg";
 // $password="12345678";
 // $telephone="0547893256";
-
-
+$telephone=substr_replace($telephone,substr($telephone,4),3);
+$telephone=substr_replace($telephone,substr($telephone,7),6);
 
 $result=$db->select("user","id",[
     "telephone"=>$telephone,
