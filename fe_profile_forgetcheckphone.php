@@ -3,7 +3,7 @@ require_once('connection.php');
 $_POST = json_decode(file_get_contents("php://input"),true);
 
 $telephone=$_POST['telephone'];
-$telephone="097-879-8855";
+// $telephone="097-879-8855";
 $telephone=substr_replace($telephone,substr($telephone,4),3);
 $telephone=substr_replace($telephone,substr($telephone,7),6);
 
