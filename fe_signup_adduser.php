@@ -35,7 +35,7 @@ else{
         $result3=$db->select("user","id",[
             "username"=>$username
         ]);
-        echo json_encode($result3);
+        echo $result3[0];
     }
 }
 ?>
