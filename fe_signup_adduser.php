@@ -5,9 +5,9 @@ $_POST = json_decode(file_get_contents("php://input"),true);
 $username=$_POST['username'];
 $password=$_POST['password'];
 $telephone=$_POST['telephone'];
-$username="abcdefg";
-$password="12345678";
-$telephone="0547893256";
+// $username="abcdefg";
+// $password="12345678";
+// $telephone="0547893256";
 
 
 
