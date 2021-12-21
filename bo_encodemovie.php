@@ -8,6 +8,6 @@ $path = "players/" . $movieCode . "-qofscDvY.html";
 $expire = time() +3600;
 $base = $path . ":" . $expire . ":" . $secret;
 $sig  =md5($base);
-$output = "https://cdn.jwplayer.com/players/" . $movieCode ."-qofscDvY.html?exp=" . $expire .  "&sig=" . $sig;
+$output = "https://cdn.jwplayer.com/players/" . $movieCode . "-qofscDvY.html?exp=" . $expire .  "&sig=" . $sig;
 echo $output;
 ?>
