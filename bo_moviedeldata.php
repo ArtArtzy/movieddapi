@@ -2,6 +2,7 @@
 require_once('connection.php');
 $_POST = json_decode(file_get_contents("php://input"),true);
 $id= $_POST['id'];
+$id=46;
 $month = date("m");
 $year = date("Y");
 $result = $db->select("movie","*",[
@@ -22,6 +23,15 @@ if(strlen($result[0]['movieCodeTh']) !=0){
         "title"=>$result[0]['nameEng'],
         "movieCode"=>$result[0]['movieCodeTh'],
         "type"=>1,
+        "month"=>$month,
+        "year"=>$year
+    ]);
+}
+if(strlen($result[0]['trailerCode']) !=0){
+    $db->insert("deletedmovie",[
+        "title"=>$result[0]['nameEng'],
+        "movieCode"=>$result[0]['trailerCode'],
+        "type"=>3,
         "month"=>$month,
         "year"=>$year
     ]);

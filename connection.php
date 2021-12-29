@@ -25,10 +25,11 @@ $db = new Medoo([
 	'database_type' => 'mysql',
 	'database_name' => 'moviedd',
 	'server' => 'localhost',
-	// 'server' => 'http://192.168.2.147',
 	'port'=>3306,
 	'username' => 'root',
 	'password' => '12345678',
+	// 'username' => 'pakkawat',
+	// 'password' => '4473567',
 	"charset" => "utf8",
 ]);
 

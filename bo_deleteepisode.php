@@ -31,6 +31,7 @@ if(strlen($movieCodeEng)>0){
     "movieCode"=>$movieCodeEng,
     "month"=>$month,
     "year"=>$year,
+    "type"=>2,
     "status"=>0
    ]) ;
 }
@@ -43,6 +44,7 @@ if(strlen($movieCodeTh)>0){
      "movieCode"=>$movieCodeTh,
      "month"=>$month,
      "year"=>$year,
+     "type"=>1,
      "status"=>0
     ]) ;
  }
