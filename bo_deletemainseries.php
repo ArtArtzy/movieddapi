@@ -59,6 +59,15 @@ for($i=0; $i<sizeof($episodeData); $i++){
 $db->delete("episode",[
     "seriesid"=>$id
 ]);
+//Delete promote file
+$fileName = "promotion/series/" . $id . "m.jpg";
+unlink($fileName);
+$fileName = "promotion/series/" . $id . "t.jpg";
+unlink($fileName);
+$fileName = "promotion/series/" . $id . "p.jpg";
+unlink($fileName);
+
+
 
 //Delete data from series table
 $db->delete("series",[
