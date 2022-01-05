@@ -2,7 +2,6 @@
 require_once('connection.php');
 $_POST = json_decode(file_get_contents("php://input"),true);
 $id= $_POST['id'];
-$id=46;
 $month = date("m");
 $year = date("Y");
 $result = $db->select("movie","*",[
