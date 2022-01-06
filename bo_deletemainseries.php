@@ -16,7 +16,23 @@ $episodeData = $db->select("episode","*",[
         "id"=>$id
     ]);
     $seriesName = $seriesData[0]['nameEng'];
-
+    $month = date('m');
+    $year = date('Y');
+    // add trailer deleted
+    if(strlen($seriesData[0]['trailerCode']) > 0){
+        $movieCode = $seriesData[0]['trailerCode'];
+        $type = 3;
+        $db->insert("deletedseries",[
+            "seriesName"=>$seriesName,
+            "seasonName"=>"trailer",
+            "episodeName"=>"-",
+            "movieCode"=>$movieCode,
+            "month"=>$month,
+            "year"=>$year,
+            "type"=>$type,
+            "status"=>0
+        ]);
+    }
 for($i=0; $i<sizeof($episodeData); $i++){
     $seasonData = $db->select("season","*",[
         "id"=>$episodeData[$i]['seasonid']
@@ -54,6 +70,7 @@ for($i=0; $i<sizeof($episodeData); $i++){
             "status"=>0
         ]);
     }
+    
 }
 //Delete data from episode table
 $db->delete("episode",[
