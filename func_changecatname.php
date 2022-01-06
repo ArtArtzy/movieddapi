@@ -10,7 +10,6 @@ for($i=0;$i<sizeof($arrCat);$i++){
 $result=$db->select("category","*");
 
 for($i=0;$i<sizeof($arrCat);$i++){
-
     for($j=0;$j<sizeof($result);$j++){
 
         if($arrCat[$i]==$result[$j]['id']){
@@ -19,7 +18,6 @@ for($i=0;$i<sizeof($arrCat);$i++){
             $textreturn=$textreturn . "| " . $str . " ";
         }
     }
- 
 }
 $textreturn=ltrim($textreturn,"|");
 return $textreturn;
