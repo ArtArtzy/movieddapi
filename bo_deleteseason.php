@@ -10,7 +10,7 @@ $episodeData = $db->select("episode","*",[
 ]);
     //Find series name
     $seriesData = $db->select("series","*",[
-        "id"=>$id
+        "id"=>$episodeData[0]['seriesid']
     ]);
     $seriesName = $seriesData[0]['nameEng'];
 
@@ -54,18 +54,12 @@ for($i=0; $i<sizeof($episodeData); $i++){
     
 }
 
-
-
-
-
-
-
-
-
-
-
 $db->delete("season",[
 "id"=>$id
+]);
+//Delete data from episode table
+$db->delete("episode",[
+    "seasonid"=>$id
 ]);
 
 ?>
