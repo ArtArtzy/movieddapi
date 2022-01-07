@@ -1,4 +1,5 @@
 <?php
+//*************Not use */
 require_once('connection.php');
 $_POST = json_decode(file_get_contents("php://input"),true);
 $cat = $_POST['cat'];
